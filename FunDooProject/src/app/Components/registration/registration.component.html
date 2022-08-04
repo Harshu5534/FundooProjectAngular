@@ -1,0 +1,77 @@
+<div fxFlex=100 fxLayoutAlign="center center" style="border:1px solid black">
+    <mat-card fxFlex=50 fxLayout="row" fxLayoutAlign="center center">
+        <form fxFlex="row" [formGroup]="RegisterForm"(ngSubmit)="Registration()">
+            <div fxFlex=100 fxLayout="column">
+                <div fxFlex=100 fxLayoutGap="10px">-
+                </div>
+                <div>
+                    <h3 style="font-size: 30px; font-style: inherit">
+                        <span style="color: rgb(9, 137, 196)">F</span>
+                        <span style="color: rgb(216, 65, 65)">u</span>
+                        <span style="color: rgb(219, 154, 32)">n</span>
+                        <span style="color: rgb(209, 26, 117)">d</span>
+                        <span style="color: rgb(142, 151, 14)">o</span>
+                        <span style="color: rgb(39, 193, 78)">o</span>
+                        <span style="color: rgb(14, 197, 213)">N</span>
+                        <span style="color: rgb(203, 78, 15)">o</span>
+                        <span style="color: rgb(22, 111, 99)">t</span>
+                        <span style="color: rgb(102, 9, 164)">e</span>
+                    </h3>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <span style="font-size: 20px;">Create your Google account</span>
+                </div>
+                <div fxFlex=100>
+                    <mat-form-field appearance="outline" style="padding-right: 10px">
+                        <mat-label>First Name</mat-label>
+                        <input matInput placeholder="First Name" formControlName="FirstName">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput placeholder="Last Name" formControlName="LastName">
+                    </mat-form-field>
+                </div>
+                <div class="username">
+                    <mat-form-field appearance="outline" style="width:412px">
+                        <mat-label>Username</mat-label>
+                        <input matInput placeholder="Username">
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-hint>You can use letters,numbers & periods</mat-hint>
+                </div>
+                <div class="password">
+                    <mat-form-field appearance="outline" style="padding-right: 10px">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password"formControlName="password">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Confirm</mat-label>
+                        <input matInput placeholder="Confirm"formControlName="Confirm">
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-hint>Use 8 or more characters with a mix of letters, numbers & symbols</mat-hint>
+                </div>
+                <div style="margin-top: 10px;">
+                    <mat-checkbox>Show password</mat-checkbox>
+                </div>
+                <div>
+                    <div class="button">
+                        <button class="btn btn-secondary">Create account</button>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div class="img">
+                <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt="img" class="image" width="300"
+                    height="300" />
+                <div style="text-align: center;">
+                    <a>All of Fundoo working for you.</a>
+                </div>
+            </div>
+        </form>
+    </mat-card>
+</div>
