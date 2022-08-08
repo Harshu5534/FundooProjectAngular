@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './Components/registration/registration.component';
@@ -14,6 +13,7 @@ import {FormsModule} from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +31,8 @@ import { ForgetPasswordComponent } from './Components/forget-password/forget-pas
     FlexLayoutModule,
     ReactiveFormsModule,
     FormsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
