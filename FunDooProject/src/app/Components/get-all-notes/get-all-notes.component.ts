@@ -16,6 +16,7 @@ export class GetAllNotesComponent implements OnInit {
     this.noteservice.getallnotes().subscribe((response:any)=>{
       console.log('Allnotes',response);
       this.NotesList=response.data
+      console.log(this.NotesList);
     })
   }
 }

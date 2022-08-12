@@ -1,9 +1,9 @@
-<div fxLayoutAlign="center center" *ngFor='let note of NoteArray'>
-   <div fxLayout="row">
+<div class="Outerdiv" fxLayoutAlign="center center" *ngFor='let note of NoteArray'>
+   <div class="main"fxLayout="row">
         {{note.title}}
         {{note.description}}
    </div> 
-   <div>
-        <app-icons></app-icons>
-   </div>
+   <div fxLayout="row" fxLayoutAlign="space-between center">
+     <app-icons></app-icons>
+ </div>
 </div>

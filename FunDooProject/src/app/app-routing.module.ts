@@ -7,14 +7,15 @@ import { ForgetPasswordComponent } from './Components/forget-password/forget-pas
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
 import { IconsComponent } from './Components/icons/icons.component';
-
+import { AuthenticationGuard } from './authentication.guard';
 
 const routes: Routes = [
+  {path:'', redirectTo:"/login", pathMatch:'full' },
   {path:'login',component:LoginComponent},
   {path:'Registration',component:RegistrationComponent},
   {path:'Resetpassword',component:ResetPasswordComponent},
   {path:'ForgetPassword',component:ForgetPasswordComponent},
-  {path:'dashboard',component:DashboardComponent,
+  {path:'dashboard',component:DashboardComponent,canActivate:[AuthenticationGuard],
   children:[
     { path:'', redirectTo:"note", pathMatch:'full' },
     { path:'note',component:GetAllNotesComponent},

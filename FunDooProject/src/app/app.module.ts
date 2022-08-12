@@ -14,6 +14,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import { AuthService } from './services/AuthService/auth.service';
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './Components/registration/registration.component';
@@ -26,6 +27,9 @@ import { DisplayNotesComponent } from './Components/display-notes/display-notes.
 import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
 import { IconsComponent } from './Components/icons/icons.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ArchivenotesComponent } from './Components/archivenotes/archivenotes.component';
+import { TrashnotesComponent } from './Components/trashnotes/trashnotes.component';
+import { UpdateComponent } from './Components/update/update.component';
 
 
 @NgModule({
@@ -39,7 +43,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     CreateNotesComponent,
     DisplayNotesComponent,
     GetAllNotesComponent,
-    IconsComponent
+    IconsComponent,
+    ArchivenotesComponent,
+    TrashnotesComponent,
+    UpdateComponent
     
   ],
   imports: [
@@ -60,7 +67,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatCardModule,
     MatSnackBarModule
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

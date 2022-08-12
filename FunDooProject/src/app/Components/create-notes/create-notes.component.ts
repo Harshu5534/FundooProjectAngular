@@ -43,7 +43,8 @@ export class CreateNotesComponent implements OnInit {
 
       }
       this.note.createnotes(reqData).subscribe((response: any) => {
-        console.log("Register successful", response);
+        console.log("Create note successfully", response);
+        localStorage.setItem("token",response.response)
       }, (error: any) => {
         console.log(error);
       })
