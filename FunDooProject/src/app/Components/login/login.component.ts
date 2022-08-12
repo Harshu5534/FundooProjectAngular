@@ -27,7 +27,8 @@ export class LoginComponent implements OnInit {
         Password: this.loginForm.value.Password
       }
       this.user.loginUserService(reqData).subscribe((response: any) => {
-        console.log("login successfully",response);
+        console.log("Login successfully",response);
+        localStorage.setItem("token",response.response)
       }, (error: any) => {
         console.log(error);
       });

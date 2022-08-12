@@ -39,7 +39,7 @@ export class UserService {
         'Content-Type': 'application/json-patch+json',
       }),
     };
-    return this.httpService.postservice(`User/Forget`,reqdata,false,header);
+    return this.httpService.postservice(`User/Forget?email=${reqdata.email}`,reqdata,false,header);
   }
   ResetPasswordUserService(reqdata: any){
     console.log(reqdata);
